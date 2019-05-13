@@ -1,9 +1,9 @@
-# Module 1 - Textract
+# Module 1 - Amazon Textract
 In this module we'll be creating the text extraction portion of the document image processing and indexing pipeline.  The services that we'll be interacting with are Amazon S3, Amazon Textract, and AWS Lambda.  
 
 ![Textract Architecture](textract-arch.png)
 
-When a document image is uploaded to S3, Lambda will receive an event trigger.  The Lambda function will process the event, retrieve the document from S3 and submit it to Textract for processing. Textract will respond with a JSON representation of the processed image. The Lambda function will process the JSON response and create a text file. Finally, the Lambda function will upload the text file to the same S3 bucket with `/processed` included in the object key prefix.
+When a document image is uploaded to S3, Lambda will receive an event trigger.  The Lambda function will process the event, retrieve the document from S3 and submit it to Textract for processing. Textract will respond with a JSON representation of the processed image. The Lambda function will process the JSON response and create a text file. Finally, the Lambda function will upload the text file to the same S3 bucket with `processed/` included in the object key prefix.
 
 Follow the steps below to complete Module 1.
 
@@ -48,7 +48,7 @@ When Amazon S3 successfully creates your bucket, the console displays your empty
 
 10. Copy your code from the [textract.py](textract.py) function included here in the repo. Be sure to edit line 6 to include your S3 bucket name.
 
-11. Click Save, at the top of the page.  
+11. Click **Save**, at the top of the page.  
 </p></details>
 
 To Verify that you've completed this section, upload the sample document provided to your s3 bucket under the `images/` object key prefix. You should see a text file under the `processed/` object key prefix in a few seconds.
