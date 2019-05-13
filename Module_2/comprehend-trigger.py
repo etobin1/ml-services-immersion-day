@@ -6,6 +6,7 @@ region = my_session.region_name
 # region = 'us-east-1'
 s3 = boto3.client('s3')
 comprehend = boto3.client(service_name='comprehend', region_name='region')
+s3_bucket = ''
 
 def lambda_handler(event, context):
     if event['Records'][0]['eventName'] == 'ObjectCreated:Put':

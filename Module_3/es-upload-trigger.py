@@ -23,7 +23,7 @@ url = host + '/' + index + '/' + type + '/'
 headers = { "Content-Type": "application/json" }
 
 def lambda_handler(event, context):
-    s3_bucket = 'comprehend-medical-demo'
+    s3_bucket = ''
 
     if event['Records'][0]['eventName'] == 'ObjectCreated:Put':
         s3_object_key = event['Records'][0]['s3']['object']['key']
