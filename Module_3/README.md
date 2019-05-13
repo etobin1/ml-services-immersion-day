@@ -2,7 +2,7 @@
 
 In this module we'll be creating the indexing portion of the document image processing and indexing pipeline.  The services that we'll be interacting with are Amazon S3, Amazon ElasticSearch, and AWS Lambda.  
 
-![Textract Architecture](textract-arch.png)
+![ElasticSearch Architecture](elasticsearch-arch.png)
 
 When a JSON document is uploaded to S3 under the `json/` object key prefix, Lambda will receive an event trigger.  The Lambda function will process the event, retrieve the document from S3 and submit it to ElasticSearch for indexing. Elasticsearch will respond with an HTTP response that indicates the successful receipt of the payload. The ElasticSearch index will provide entity based search and return a document that you can retrieve from your index for further review.
 

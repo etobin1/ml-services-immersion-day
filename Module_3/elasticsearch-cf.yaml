@@ -1,0 +1,19 @@
+---
+AWSTemplateFormatVersion: 2010-09-09
+Description: CloudFormation template for creating Immersion Day resources.
+Resources:
+    ElasticsearchDomain:
+        Type: AWS::Elasticsearch::Domain
+        Properties:
+          EBSOptions:
+            EBSEnabled: "True"
+            VolumeType: "standard"
+            VolumeSize: "10"
+          ElasticsearchClusterConfig:
+            InstanceType: "t2.small.elasticsearch"
+            InstanceCount: "1"
+          ElasticsearchVersion: "6.0"
+Outputs:
+  Elasticsearch:
+    Description: Elasticseach domain Endpoint
+    Value: !Join ['',['https://',!GetAtt ElasticsearchDomain.DomainEndpoint]]

@@ -1,7 +1,7 @@
 # Module 2 - Amazon Comprehend
 In this module we'll be creating the entity extraction portion of the document image processing and indexing pipeline.  The services that we'll be interacting with are Amazon S3, Amazon Comprehend, and AWS Lambda.  
 
-![Textract Architecture](textract-arch.png)
+![Comprehend Architecture](comprehend-arch.png)
 
 When a text document is uploaded to S3 under the `processed/` object key prefix, Lambda will receive an event trigger.  The Lambda function will process the event, retrieve the document from S3 and submit it to Comprehend for processing. Comprehend will respond with a JSON response that includes relevant entities from the processed document. The Lambda function will process the JSON response and create a text file. Finally, the Lambda function will upload the text file to the same S3 bucket with `/processed` included in the object key prefix.
 
