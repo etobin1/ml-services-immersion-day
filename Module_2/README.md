@@ -9,7 +9,7 @@ Follow the steps below to complete Module 2.
 
 
 <details>
-<summary><strong>1. Create a Lambda Function(click to expand)</strong></summary><p>
+<summary><strong>1. Create a Lambda Function (click to expand)</strong></summary><p>
 1. Sign in to the [AWS Management Console](https://console.aws.amazon.com).
 
 2. Navigate to Lambda by searching `Lambda` in the center search bar and clicking on `Lambda` in the results.

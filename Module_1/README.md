@@ -28,6 +28,7 @@ When Amazon S3 successfully creates your bucket, the console displays your empty
 
 <details>
 <summary><strong>2. Create a Lambda Function (click to expand)</strong></summary><p>
+
 1. Sign in to the [AWS Management Console](https://console.aws.amazon.com).
 
 2. Navigate to Lambda by searching `Lambda` in the center search bar and clicking on `Lambda` in the results.
@@ -46,7 +47,11 @@ When Amazon S3 successfully creates your bucket, the console displays your empty
 
 9. Scroll up and click on your Lambda function's name in the designer, and then scroll down to your function's code.
 
-10. Copy your code from the [textract.py](textract.py) function included here in the repo. Be sure to edit line 6 to include your S3 bucket name.
+10. Unzip your local copy of [module_1.zip](module_1.zip).
+
+11. Update `lambda_function.py` on line 6 to include your bucket name, and re-zip the archive libraries with your updated python script.
+
+12. Choose the **Code entry type** `Upload a .zip file`.  Select your archive.zip file, and click **Upload**.
 
 11. Click **Save**, at the top of the page.  
 </p></details>

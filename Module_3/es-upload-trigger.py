@@ -31,6 +31,7 @@ def lambda_handler(event, context):
         content = s3_object['Body'].read()
     else:
         print('Error: Could not download object')
+
     entities = event['Entities']
     print(entities)
     i = 0

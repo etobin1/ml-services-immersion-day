@@ -9,7 +9,7 @@ When a JSON document is uploaded to S3 under the `json/` object key prefix, Lamb
 Follow the steps below to complete Module 3.
 
 <details>
-<summary><strong>1. Create an Amazon ElasticSearch Index(click to expand)</strong></summary><p>
+<summary><strong>1. Create an Amazon ElasticSearch Index (click to expand)</strong></summary><p>
 1. Navigate to CloudFormation by searching `CloudFormation` in the center search bar and clicking on `CloudFormation` in the results.
 
 2. Click **Create Stack**
@@ -31,7 +31,7 @@ Follow the steps below to complete Module 3.
 </p></details>
 
 <details>
-<summary><strong>2. Create a Lambda Function(click to expand)</strong></summary><p>
+<summary><strong>2. Create a Lambda Function (click to expand)</strong></summary><p>
 1. Sign in to the [AWS Management Console](https://console.aws.amazon.com).
 
 2. Navigate to Lambda by searching `Lambda` in the center search bar and clicking on `Lambda` in the results.
@@ -53,4 +53,18 @@ Follow the steps below to complete Module 3.
 10. Copy your code from the [es-upload-trigger.py](es-upload-trigger.py) function included here in the repo.
 
 11. Click **Save**, at the top of the page.  
+</p></details>
+
+<details>
+<summary><strong>2. Search your Index (click to expand)</strong></summary><p>
+
+1. Navigate to ElasticSearch by searching `ElasticSearch` in the center search bar and clicking on `ElasticSearch` in the results.
+
+2. Click **Modify Access Policy**
+
+3. Click **Select a template**, and select `allow access to a domain from an IP`.
+
+4. Provide your public IP address in the modal, and click **OK**.
+
+5. Click on your ElasticSearch Domain, and then click on the Kibana URL to navigate to your Kibana dashboard.
 </p></details>

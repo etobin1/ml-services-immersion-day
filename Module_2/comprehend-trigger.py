@@ -22,9 +22,7 @@ def lambda_handler(event, context):
 
     # Create a temp file to upload to S3
     file_object = open('/tmp/workfile', 'w')
-    for block in blocks:
-        if block['BlockType'] == 'LINE':
-            file_object.write(block['Text']+'\n')
+    file_object.write(comprehend_response)
     file_object.close()
 
     #Read the file object and write it to S3
