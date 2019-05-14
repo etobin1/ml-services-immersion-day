@@ -41,7 +41,7 @@ When Amazon S3 successfully creates your bucket, the console displays your empty
 
 6. In the Lambda function, select **S3** from the Add Trigger list on the top left of the page.
 
-7. Scroll down to configure the trigger in the **Configure triggers** section by selecting your bucket name from the drop down. Then, select **All object create events** for Event type. Next, select `images/` as the prefix, and leave the Suffix section blank.
+7. Scroll down to configure the trigger in the **Configure triggers** section by selecting your bucket name from the drop down. Then, select **PUT events** for Event type. Next, select `images/` as the prefix, and leave the Suffix section blank.
 
 8. Ensure that there is a checkmark in the box next to enable trigger, and click **Add**
 
@@ -53,7 +53,9 @@ When Amazon S3 successfully creates your bucket, the console displays your empty
 
 12. Choose the **Code entry type** `Upload a .zip file`.  Select your archive.zip file, and click **Upload**.
 
-11. Click **Save**, at the top of the page.  
+13. Update the timeout from 3 seconds to 1 minute under **Basic Settings**.
+
+14. Click **Save**, at the top of the page.  
 </p></details>
 
-To Verify that you've completed this section, upload the sample document provided to your s3 bucket under the `images/` object key prefix. You should see a text file under the `processed/` object key prefix in a few seconds.
+To Verify that you've completed this section, upload the sample document provided to your s3 bucket under the `images/` object key prefix. You should see a text file under the `processed/` object key prefix in about one minute.
