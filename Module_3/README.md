@@ -26,7 +26,7 @@ Follow the steps below to complete Module 3.
 
 8. Once the status of your stack is **CREATE_COMPLETE**, click on your **Stack Name** and expand the outputs to reveal your ElasticSearch URL.
 
-9. Copy your elasticsearch URL into line 17 of [es-upload-trigger.py](es-upload-trigger.py). Be sure to edit line 26 to include your S3 bucket name.
+9. Copy your ElasticSearch **Endpoint URL** into line 17 of [lambda_function.py](lambda_function.py). Be sure to edit line 26 to include your S3 bucket name.
 
 </p></details>
 
@@ -50,9 +50,15 @@ Follow the steps below to complete Module 3.
 
 9. Scroll up and click on your Lambda function's name in the designer, and then scroll down to your function's code.
 
-10. Copy your code from the [es-upload-trigger.py](es-upload-trigger.py) function included here in the repo.
+10. Unzip your local copy of [module_3.zip](module_3.zip).
 
-11. Click **Save**, at the top of the page.  
+11. Update `lambda_function.py` on line 6 to include your bucket name, and re-zip the archive libraries with your updated python script.
+
+12. Choose the **Code entry type** `Upload a .zip file`.  Select your archive.zip file, and click **Upload**.
+
+13. Update the timeout from 3 seconds to 1 minute under **Basic Settings**.
+
+14. Click **Save**, at the top of the page.  
 </p></details>
 
 <details>
@@ -67,4 +73,18 @@ Follow the steps below to complete Module 3.
 4. Provide your public IP address in the modal, and click **OK**.
 
 5. Click on your ElasticSearch Domain, and then click on the Kibana URL to navigate to your Kibana dashboard.
+
+6. This will open up the Kibana dashboard. On the **Index pattern** text box, type `lambda-index` and choose **Create**.
+
+7. You will see the field and attribute names in Kibana on which we will build some visualizations.
+
+8. On the left navigation pane, click **Management** and then click **Saved Objects**.
+
+9. Click Import on the top right corner and navigate to the Entity_Dashboard.json file within your Module_3 directory.
+
+10. You will see a pop-up message with a question asking if you want to overwrite. Choose Yes, overwrite all.
+
+11. You will see another pop-up window saying some index patterns do not exist. Make sure lambda-index is selected in the drop-down Newindex pattern list and click **Confirm all changes**. You should see a new dashboard called EntityDashboard.
+
+12. On the left navigation pane, click **Dashboard** and then on the EntityDashboard Link. Search for a filename like `FileName"buckleyjohnsample.pdf"`, and you will see the dashboard with visualizations generated from the extracted entities.
 </p></details>
