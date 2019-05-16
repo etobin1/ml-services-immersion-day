@@ -34,3 +34,5 @@ Follow the steps below to complete Module 2.
 
 12. Click **Save**, at the top of the page.  
 </p></details>
+
+When you're done continue on to [Module 3: ElasticSearch Indexing](../Module_3/README.md)

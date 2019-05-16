@@ -59,3 +59,5 @@ When Amazon S3 successfully creates your bucket, the console displays your empty
 </p></details>
 
 To Verify that you've completed this section, upload the sample document provided to your s3 bucket under the `images/` object key prefix. You should see a text file under the `processed/` object key prefix in about one minute.
+
+When you're done continue on to [Module 2: Comprehend Analysis](../Module_2/README.md)
