@@ -28,7 +28,9 @@ Follow the steps below to complete Module 2.
 
 9. Scroll up and click on your Lambda function's name in the designer, and then scroll down to your function's code.
 
-10. Copy your code from the [comprehend-trigger.py](comprehend-trigger.py) function included here in the repo. Be sure to edit line 9 to include your S3 bucket name.
+10. Copy your code from the [comprehend-trigger.py](comprehend-trigger.py) function included here in the repo. Be sure to edit line 7 to include your S3 bucket name.
 
-11. Click **Save**, at the top of the page.  
+11. Update the timeout from 3 seconds to 1 minute under **Basic Settings**.
+
+12. Click **Save**, at the top of the page.  
 </p></details>

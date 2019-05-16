@@ -41,7 +41,7 @@ When Amazon S3 successfully creates your bucket, the console displays your empty
 
 6. In the Lambda function, select **S3** from the Add Trigger list on the top left of the page.
 
-7. Scroll down to configure the trigger in the **Configure triggers** section by selecting your bucket name from the drop down. Then, select **PUT events** for Event type. Next, select `images/` as the prefix, and leave the Suffix section blank.
+7. Scroll down to configure the trigger in the **Configure triggers** section by selecting your bucket name from the drop down. Then, select **All create events** for Event type. Next, select `images/` as the prefix, and leave the Suffix section blank.
 
 8. Ensure that there is a checkmark in the box next to enable trigger, and click **Add**
 
@@ -49,9 +49,9 @@ When Amazon S3 successfully creates your bucket, the console displays your empty
 
 10. Unzip your local copy of [module_1.zip](module_1.zip).
 
-11. Update `lambda_function.py` on line 6 to include your bucket name, and re-zip the archive libraries with your updated python script.
+11. Update `lambda_function.py` on line 10 to include your bucket name, and re-zip the archive libraries with your updated python script.
 
-12. Choose the **Code entry type** `Upload a .zip file`.  Select your archive.zip file, and click **Upload**.
+12. Choose the **Code entry type** `Upload a .zip file`.  Select your module_1.zip file, and click **Upload**.
 
 13. Update the timeout from 3 seconds to 1 minute under **Basic Settings**.
 

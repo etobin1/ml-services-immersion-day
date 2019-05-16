@@ -26,7 +26,7 @@ Follow the steps below to complete Module 3.
 
 8. Once the status of your stack is **CREATE_COMPLETE**, click on your **Stack Name** and expand the outputs to reveal your ElasticSearch URL.
 
-9. Copy your ElasticSearch **Endpoint URL** into line 17 of [lambda_function.py](lambda_function.py). Be sure to edit line 26 to include your S3 bucket name.
+9. Copy your ElasticSearch **Endpoint URL** into line 17 of [lambda_function.py](lambda_function.py). Be sure to edit line 18 to include your S3 bucket name.
 
 </p></details>
 
